@@ -3,10 +3,6 @@ DROP TABLE IF EXISTS properties CASCADE;
 DROP TABLE IF EXISTS reservations CASCADE;
 DROP TABLE IF EXISTS property_reviews CASCADE;
 
--- Create the database.
-CREATE DATABASE lightbnb;
--- \c lightbnb
--- Create the tables.
 CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,

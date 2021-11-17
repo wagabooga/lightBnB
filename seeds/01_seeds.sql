@@ -3,29 +3,30 @@ INSERT INTO users (name, email, password) VALUES
   ('Adam', 'Adam@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'), 
   ('Johnny', 'Johnny@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
 
-/* Insert properties */
-INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active) 
-  -- owner_id,
-  -- title,
-  -- description,
-  -- thumbnail_photo_url,
-  -- cover_photo_url,
-  -- cost_per_night,
-  -- parking_spaces,
-  -- number_of_bathrooms,
-  -- number_of_bedrooms,
-  -- country,
-  -- street,
-  -- city,
-  -- province,
-  -- post_code
+
+INSERT INTO properties (
+  owner_id, 
+  title, 
+  description, 
+  thumbnail_photo_url, 
+  cover_photo_url, 
+  cost_per_night, 
+  parking_spaces, 
+  number_of_bathrooms, 
+  number_of_bedrooms, 
+  country, 
+  street, 
+  city,
+  province, 
+  post_code, 
+  active) 
   VALUES (
   1,
   'Mytitle',
   'Mydescription',
   '<ThumbnailPhotoURL>',
   '<coverPhotoURL>',
-  '$1000',
+  1000,
   2,
   2,
   2,
@@ -33,7 +34,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
   '1234 Street st',
   'Vancouver',
   'British Columbia',
-  'V5K 1W1'
+  'V5K 1W1',
   'TRUE'
 ),
 (
@@ -42,7 +43,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
   'Mydescription',
   '<ThumbnailPhotoURL>',
   '<coverPhotoURL>',
-  '$1000',
+  1000,
   1,
   2,
   3,
@@ -50,7 +51,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
   '4321 Street st',
   'Vancouver',
   'British Columbia',
-  'V5K 0W0'
+  'V5K 0W0',
   'TRUE'
 ),
 (
@@ -59,7 +60,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
   'Mydescription',
   '<ThumbnailPhotoURL>',
   '<coverPhotoURL>',
-  '$1,000,000',
+  1000000,
   5,
   5,
   5,
@@ -67,7 +68,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
   '1234 Street st',
   'Vancouver',
   'British Columbia',
-  'V5K 5W5'
+  'V5K 5W5',
   'TRUE'
 );
 
@@ -87,6 +88,6 @@ VALUES
 INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message) 
 VALUES 
 (1, 1, 1, 5, 'great place 5/5'), 
-(2, 2, 2, 0, 'had rats 0/5'), 
+(2, 2, 2, 1, 'had rats 0/5'), 
 (3, 3, 3, 3, 'good vacation spot but food was bad 3/5');
 
